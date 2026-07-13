@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paper Gallery · 论文陈列室</title>
+  <meta name="description" content="Includes papers and projects in the fields of computer vision, scene generation, and city planning." />
+
+  <!-- 字体：Newsreader（衬线标题）/ IBM Plex Sans（正文）/ IBM Plex Mono（标签与角标） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS（浏览器端 CDN 版本，免构建） -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // 扩展 Tailwind 主题：色板 / 字体，与设计稿的暖色学术风格保持一致
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: "#FBF7F1",       // 页面背景：暖白
+            surface: "#FFFFFF",     // 卡片表面
+            "surface-alt": "#F3ECE1", // 次级面板 / 标签底色
+            ink: "#2A241E",         // 主文字：暖炭色
+            muted: "#8A8074",       // 次要文字：暖灰褐
+            border: "#E6DDD0",      // 细线边框
+            accent: "#B6532F",      // 主强调色：烧褐橙
+            "accent-soft": "#F0DDD1",
+            sage: "#7C8B5E",
+            dusty: "#5E7C8B",
+          },
+          fontFamily: {
+            serif: ["Newsreader", "Georgia", "serif"],
+            sans: ["IBM Plex Sans", "system-ui", "sans-serif"],
+            mono: ["IBM Plex Mono", "ui-monospace", "monospace"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background-color: #FBF7F1; }
+
+    /* 背景细网格纹理：呼应「坐标纸 / 图版」的学术质感，用于 Hero 区域 */
+    .bg-grid-dots {
+      background-image: radial-gradient(#D9CDBC 1px, transparent 1px);
+      background-size: 22px 22px;
+      -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, black 40%, transparent 100%);
+      mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, black 40%, transparent 100%);
+    }
+
+    /* 摘要文字截断，兼容未内置 line-clamp 的情况 */
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* 可见的键盘聚焦态，保证可访问性 */
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 2px solid #5bf0e4bc;
+      outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+    }
+  </style>
+
+  <!-- React 18 + Babel Standalone（浏览器端转译 JSX，免构建部署） -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- 数据层：站点配置 + 论文数据，新增论文只需编辑这个文件 -->
+  <script src="data.js"></script>
+  <!-- 视图层：所有 React 组件 -->
+  <script type="text/babel" src="app.js"></script>
+</body>
+</html>
