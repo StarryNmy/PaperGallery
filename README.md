@@ -1,8 +1,8 @@
 # Paper Gallery
 
-一个用于收录计算机视觉、城市规划与场景生成方向论文的个人学术收录网站。
+一个用于收录计算机视觉、城市规划与场景生成方向论文的学术收录网站。
 
-**[🔗 在线预览 →](https://StarryNmy.github.io/paper-gallery/)**
+**[🔗 在线预览 →](https://starrynmy.github.io/PaperGallery/)**
 
 ![Paper Gallery 预览](./figures/home.png)
 
