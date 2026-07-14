@@ -81,24 +81,34 @@ const papersData = [
     paperUrl: "https://kookie12.github.io/InSpace-Project-Page/",
     venue: "ECCV 2026",
   },
-  // {
-  //   id: "p5",
-  //   title: "Open-Vocabulary Object Detection with Vision-Language Models",
-  //   abstract:
-  //     "结合视觉-语言模型实现开放词汇的目标检测，使模型能够识别训练集中未出现过的新类别。",
-  //   tags: ["NeurIPS", "计算机视觉", "开源项目"],
-  //   imageUrl: "",
-  //   paperUrl: "https://papers.nips.cc/",
-  //   venue: "NeurIPS 2023",
-  // },
-  // {
-  //   id: "p6",
-  //   title: "An Open-Source Toolkit for Human-Centered Scene Editing",
-  //   abstract:
-  //     "一套面向研究者的开源工具包，提供交互式的三维场景编辑与可视化能力，降低场景生成研究的门槛。",
-  //   tags: ["开源项目", "人机交互", "arXiv"],
-  //   imageUrl: "",
-  //   paperUrl: "https://github.com/",
-  //   venue: "GitHub",
-  // },
+  {
+    id: "p5",
+    title: "NaLA: A 3D Native LLM Layout Agent for High-quality 3D Scene Generation",
+    abstract:
+      "一个原生3D LLM布局代理，通过在场景中放置3D模型来生成高质量的3D室内场景",
+    tags: ["ECCV", "场景生成", "开源项目"],
+    imageUrl: "./assets/NaLA.png",
+    paperUrl: "https://adamcwan.github.io/NaLA/",
+    venue: "ECCV 2026",
+  },
+  {
+    id: "p6",
+    title: "PIXELRAG: Web Screenshots Beat Text for Retrieval-Augmented Generation",
+    abstract:
+      "识别网页截图比直接获取网页中的文本用于RAG，更能增强LLM的表现能力",
+    tags: ["arXiv", "LLM", "开源项目"],
+    imageUrl: "./assets/PIXELRAG.png",
+    paperUrl: "https://github.com/StarTrail-org/PixelRAG",
+    venue: "GitHub",
+  },
+  {
+    id: "p7",
+    title: "ReScene: Structured Indoor Scene Reconstruction from Multi-View Captures",
+    abstract:
+      "多视角图像用于有序的室内场景重建",
+    tags: ["arXiv", "场景生成"],
+    imageUrl: "./assets/ReScene.png",
+    paperUrl: "https://arxiv.org/abs/2606.28060",
+    venue: "arXiv",
+  },
 ];
